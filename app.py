@@ -6,6 +6,10 @@ app = Flask(__name__)
 def index():
   return '''
 <html>
-<head><title></title></head><body>I am alive</body>
+<head><title>New life</title>
+</head>
+<body>I am alive<br>
+<input>
+</body>
 </html>
 '''
