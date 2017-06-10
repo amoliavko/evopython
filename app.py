@@ -8,7 +8,7 @@ def index():
 <html>
 <head><title>New life</title>
 </head>
-<body>I am alive<br>
+<body>Hello Dasha. I love you :)<br>
 <input>
 <input type=submit>
 </body>
