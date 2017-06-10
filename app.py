@@ -10,6 +10,7 @@ def index():
 </head>
 <body>I am alive<br>
 <input>
+<input type=submit>
 </body>
 </html>
 '''
