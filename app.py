@@ -1,16 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return '''
-<html>
-<head><title>New life</title>
-</head>
-<body>Hello Dasha. I love you :)<br>
-<input>
-<input type=submit>
-</body>
-</html>
-'''
+  return render_template('index.html')
