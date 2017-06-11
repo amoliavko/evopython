@@ -1,4 +1,4 @@
-from randomapp import app, db
+from randomapp import app
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
