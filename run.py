@@ -10,3 +10,6 @@ app = Flask(__name__)
 def index():
    return "Hello"
 
+
+app.run()
+
