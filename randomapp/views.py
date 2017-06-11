@@ -14,5 +14,7 @@ def success():
 def index():
     form = InputName()
     if request.method == 'POST':
-        return db.session.query(Table.name)
+        if request.form['submit'] == 'Добавить имя':
+            if form.validate_on_submit():
+        	return "yes"
     return render_template('index.html', form=form)
