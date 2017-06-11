@@ -14,5 +14,5 @@ def success():
 def index():
     form = InputName()
     if request.method == 'POST':
-        return 'Add name'+str(db.session.query(Table.name))
+        return db.session.query(Table.name)
     return render_template('index.html', form=form)
