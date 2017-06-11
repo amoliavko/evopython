@@ -14,5 +14,5 @@ def success():
 def index():
     form = InputName()
     if request.method == 'POST':
-        return 'Add name'
+        return 'Add name'+form.name.data
     return render_template('index.html', form=form)
