@@ -8,12 +8,15 @@ app.config.from_object('config')
 #db = SQLAlchemy(app)
 #heroku = Heroku(app)
 
-from randomapp import views
+
 
 
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     return 'YES'
+
+
+from randomapp import views
 
 
