@@ -9,11 +9,6 @@ app.config.from_object('config')
 from randomapp import views
 
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    return 'YES'
-
-
 
 
 
