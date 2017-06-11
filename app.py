@@ -7,4 +7,9 @@ app = Flask(__name__)
 app.config.from_object('config')
 
 
-import views
+
+
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return 'YES'
