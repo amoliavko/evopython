@@ -13,4 +13,6 @@ def success():
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = InputName()
+    if request.method == 'POST':
+        return 'Add name'
     return render_template('index.html', form=form)
