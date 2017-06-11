@@ -1,3 +1,1 @@
-from my_app import app
-
-
+from randomapp import app
