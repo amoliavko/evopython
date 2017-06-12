@@ -17,6 +17,9 @@ class InputName(Form):
 @app.route('/', methods=['GET', 'POST'])
 def index():
 	form = InputName()
-	return render_template('index.html', form=form)
+	if request.method == 'POST':
+		if request.form['submit'] == 'Добавить имя':
+			if form.validate_on_submit():
+				return render_template('index.html', form=form)
 
 
