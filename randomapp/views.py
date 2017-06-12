@@ -17,6 +17,8 @@ def index():
                 db.session.add(n)
                 db.session.commit()
                 return render_template("/index.html", form=form, succuss_add=form.name.data)
+            else:
+                return render_template("/index.html", form=form, error_add_already=form.name.data)
 
         elif request.form['submit'] == 'Удалить имя':
             if form.name.data == '':

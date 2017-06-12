@@ -6,7 +6,7 @@
 </head>
 <body>
 
-{% if error is defined %}
+{% if erro is defined %}
             <div class="alert alert-danger">
             <center>
                 <strong>Укажите имя!</strong>
@@ -14,14 +14,21 @@
             </div>
 {% endif %}
 
-{% if error_del is defined %}
+{% if error_add_already is defined %}
             <div class="alert alert-danger">
             <center>
-                <strong>Имя отсутствует!</strong>
+                <strong>Имя уже сохранено!</strong>
             </center>
             </div>
 {% endif %}
 
+{% if error_del is defined %}
+            <div class="alert alert-danger">
+            <center>
+                <strong>Имя отсутствует в базе!</strong>
+            </center>
+            </div>
+{% endif %}
 
 {% if succuss_add is defined %}
             <div class="alert alert-danger">
@@ -47,7 +54,6 @@
                 {%endfor%}
             </center>
 {% endif %}
-
 
         <form action="" method="POST" name="Name">
         <center>
