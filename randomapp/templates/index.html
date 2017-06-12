@@ -76,6 +76,11 @@
         <form action="" method="POST" name="Name">
         <center>
             <p><h2><b>RANDOM APP</b></h2></p>
+        <div class="col-xs-3">
+        <label for="ex2">col-xs-3</label>
+        <input class="form-control" id="ex2" type="text">
+        </div>
+
             <p>{{form.name(size=10, placeholder="Введите имя", class="form-control")}}</p>
             {{ form.name(size=30, placeholder="Введите имя", class="form-control input-sm")}}
             <input type="submit" name="submit" value='Добавить имя' class='btn btn-lg btn-primary'>
