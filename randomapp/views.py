@@ -21,10 +21,12 @@ def index():
         elif request.form['submit'] == 'Удалить имя':
             if form.name.data == '':
                 return render_template("/index.html", form=form, error=form.name.data)
-            elif Table.query.filter_by(name=form.name.data).first() is not None:
+            elif Table.query.filter_by(name=form.name.data).first():
                     Table.query.filter(Table.name == form.name.data).delete()
                     db.session.commit()
                     return render_template("/index.html", form=form, succuss_del=form.name.data)
+            else:
+                return render_template("/index.html", form=form, error_del='error')
 
         elif request.form['submit'] == 'Выбрать случайных победителей':
             id_list = []

@@ -9,15 +9,24 @@
 {% if error is defined %}
             <div class="alert alert-danger">
             <center>
-                <strong>Укажите имя</strong>
+                <strong>Укажите имя!</strong>
             </center>
             </div>
 {% endif %}
 
+{% if error_del is defined %}
+            <div class="alert alert-danger">
+            <center>
+                <strong>Имя отсутствует!</strong>
+            </center>
+            </div>
+{% endif %}
+
+
 {% if succuss_add is defined %}
             <div class="alert alert-danger">
             <center>
-                <strong>Имя {{succuss}} добавлено</strong>
+                <strong>Имя {{succuss_add}} добавлено.</strong>
             </center>
             </div>
 {% endif %}
@@ -25,7 +34,7 @@
 {% if succuss_del is defined %}
             <div class="alert alert-danger">
             <center>
-                <strong>Имя {{succuss}} удалено</strong>
+                <strong>Имя {{succuss_del}} удалено.</strong>
             </center>
             </div>
 {% endif %}
