@@ -13,21 +13,21 @@ def index():
             if form.name.data:
                 return render_template('/success.html', result=[1,2,3])
 
-    # elif request.form['submit'] == 'Выбрать случайных победителей':
-    #     id_list = []
-    #     result = [11,22]
-    #     # for i in db.session.query(Table.name):
-    #     #     id_list.append(i)
-    #     #
-    #     # if len(id_list) <= 3:
-    #     #     for i in id_list:
-    #     #         result.append(i[-1])
-    #     #
-    #     # else:
-    #     #     while len(result) <= 3:
-    #     #         nm = random.choice(id_list)[-1]
-    #     #         if nm not in result:
-    #     #             result.append(nm)
-    #     return render_template('/success.html', result=result)
+        elif request.form['submit'] == 'Выбрать случайных победителей':
+            id_list = []
+            result = [11, 22]
+            # for i in db.session.query(Table.name):
+            #     id_list.append(i)
+            #
+            # if len(id_list) <= 3:
+            #     for i in id_list:
+            #         result.append(i[-1])
+            #
+            # else:
+            #     while len(result) <= 3:
+            #         nm = random.choice(id_list)[-1]
+            #         if nm not in result:
+            #             result.append(nm)
+            return render_template('/success.html', result=result)
 
     return render_template('index.html', form=form)
