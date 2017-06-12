@@ -2,7 +2,7 @@ from randomapp import app, db
 from randomapp.model import Table
 from flask import render_template, redirect, request
 from randomapp.forms import InputName
-import random, config
+import random
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -16,8 +16,8 @@ def index():
         elif request.form['submit'] == 'Выбрать случайных победителей':
             id_list = []
             result = [11, 22]
-            # for i in db.session.query(Table.name):
-            #     id_list.append(i)
+            for i in db.session.query(Table.name):
+                id_list.append(i)
             #
             # if len(id_list) <= 3:
             #     for i in id_list:
@@ -28,7 +28,7 @@ def index():
             #         nm = random.choice(id_list)[-1]
             #         if nm not in result:
             #             result.append(nm)
+            return str(id_list)
  #           return render_template('/success.html', result=result)
-            return config.SQLALCHEMY_DATABASE_URI
 
     return render_template('index.html', form=form)
