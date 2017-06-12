@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Success</title>
-</head>
-<body>
+{% extends "main.html" %}
+{% block content %}
+
+<div class="alert alert-danger">
         <center>
             <p><h2><b>Победители:</b></h2></p>
             {%for name in result%}
             <p>{{name}}</p>
             {%endfor%}
         </center>
-</body>
-</html>
+</div>
+    
+{% endblock %}
