@@ -16,7 +16,7 @@ class InputName(Form):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-
-	return render_template('index.html')
+	form = InputName()
+	return render_template('index.html', form=str(form))
 
 
