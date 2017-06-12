@@ -42,6 +42,6 @@ def index():
                     nm = random.choice(id_list)[-1]
                     if nm not in result:
                         result.append(nm)
-            return render_template('/success.html', result=result)
 
+            return render_template('/index.html', result=result)
     return render_template('/index.html', form=form)

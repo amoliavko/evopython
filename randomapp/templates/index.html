@@ -39,6 +39,17 @@
             </div>
 {% endif %}
 
+{% if result is defined %}
+        <div class="alert alert-danger">
+            <center>
+            <p><h2><b>Победители:</b></h2></p>
+            {%for name in result%}
+            <p>{{name}}</p>
+            {%endfor%}
+            </center>
+        </div>
+{% endif %}
+
 
         <form action="" method="POST" name="Name">
         <center>
