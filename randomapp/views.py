@@ -5,12 +5,7 @@ from randomapp.forms import InputName
 import random
 
 
-@app.route('/success', methods=['GET', 'POST'])
-def success():
-    return render_template('success.html')
 
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
-    form = InputName()
-    return render_template('index.html', form=form)
+    return render_template('index.html')
