@@ -1,6 +1,6 @@
 from randomapp import app, db
 from randomapp.model import Table
-from flask import render_template, redirect, request, redirect_back
+from flask import render_template, redirect, request
 from randomapp.forms import InputName
 import random
 
@@ -12,7 +12,7 @@ def index():
     if request.method == 'POST':
 
         if request.form['submit'] == 'Повторить':
-            return redirect_back('/index.html', form=form)
+            return request('/index.html', form=form)
 
         if request.form['submit'] == 'Добавить имя':
             if form.name.data == '':
