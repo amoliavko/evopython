@@ -10,6 +10,10 @@ def index():
     form = InputName()
 
     if request.method == 'POST':
+        
+        if request.form['submit'] == 'Повторить':
+            return render_template('/index.html', form=form)
+
         if request.form['submit'] == 'Добавить имя':
             if form.name.data == '':
                 return render_template("/index.html", form=form, error=form.name.data)
@@ -47,7 +51,6 @@ def index():
                         result.append(nm)
             return render_template('/success.html', result=result)
 
-        if request.form['submit'] == 'Повторить':
-            return render_template('/index.html', form=form)
+
 
     return render_template('/index.html', form=form)
