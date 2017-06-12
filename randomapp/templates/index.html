@@ -6,7 +6,10 @@
 </head>
 <body>
 
-{% if erro is defined %}
+{{ url_for("static", filename="css/styles.css") }}
+
+
+{% if error is defined %}
             <div class="alert alert-danger">
             <center>
                 <strong>Укажите имя!</strong>
