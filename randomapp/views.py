@@ -47,6 +47,6 @@ def index():
             return render_template('/success.html', result=result)
 
         elif request.form['submit'] == 'Повторить':
-                return render_template('/index.html', form=form)
+            return render_template('/index.html', form=form)
 
     return render_template('/index.html', form=form)

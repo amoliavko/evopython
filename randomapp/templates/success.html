@@ -1,15 +1,14 @@
 {% extends "main.html" %}
 {% block content %}
 
-<div class="alert alert-success">
         <center>
+        <div class="alert alert-success">
             <p><h2><b>Победители:</b></h2></p>
             {%for name in result%}
             <p>{{name}}</p>
             {%endfor%}
-            <input type="reset" value="Повторить">
+        </div>
         </center>
-
-</div>
+            <input type="submit" value="Повторить">
 
 {% endblock %}
