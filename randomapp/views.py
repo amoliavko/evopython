@@ -9,10 +9,10 @@ import random
 def index():
     form = InputName()
 
-    if request.form['submit'] == 'Повторить':
-        return render_template('/index.html', form=form)
+    if request.method == 'POST':
 
-    elif request.method == 'POST':
+        if request.form['submit'] == 'Повторить':
+            return render_template('/index.html', form=form)
 
         if request.form['submit'] == 'Добавить имя':
             if form.name.data == '':
