@@ -10,7 +10,7 @@
 {% endif %}
 
 {% if error_add_already is defined %}
-            <div class="alert alert-danger">
+            <div class="alert alert-info">
             <center>
                 <strong>Имя уже сохранено!</strong>
             </center>
@@ -18,7 +18,7 @@
 {% endif %}
 
 {% if error_del is defined %}
-            <div class="alert alert-danger">
+            <div class="alert alert-warning">
             <center>
                 <strong>Имя отсутствует в базе!</strong>
             </center>
@@ -26,7 +26,7 @@
 {% endif %}
 
 {% if succuss_add is defined %}
-            <div class="alert alert-danger">
+            <div class="alert alert-success">
             <center>
                 <strong>Имя {{succuss_add}} добавлено.</strong>
             </center>
@@ -34,7 +34,7 @@
 {% endif %}
 
 {% if succuss_del is defined %}
-            <div class="alert alert-danger">
+            <div class="alert alert-success">
             <center>
                 <strong>Имя {{succuss_del}} удалено.</strong>
             </center>
