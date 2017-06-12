@@ -2,7 +2,7 @@ from randomapp import app, db
 from randomapp.model import Table
 from flask import render_template, redirect, request
 from randomapp.forms import InputName
-import random
+import random, config
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -28,6 +28,7 @@ def index():
             #         nm = random.choice(id_list)[-1]
             #         if nm not in result:
             #             result.append(nm)
-            return render_template('/success.html', result=result)
+ #           return render_template('/success.html', result=result)
+            return config.SQLALCHEMY_DATABASE_URI
 
     return render_template('index.html', form=form)
