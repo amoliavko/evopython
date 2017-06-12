@@ -18,6 +18,14 @@ def index():
                     db.session.commit()
                     return 'Add name'
 
+        elif request.form['submit'] == 'Удалить имя':
+#            if form.validate_on_submit():
+            if form.name.data:
+                if Table.query.filter_by(name=form.name.data).first() is not None:
+                    Table.query.filter(Table.name == form.name.data).delete()
+                    db.session.commit()
+                    return 'Delete name ' + form.name.data
+
         elif request.form['submit'] == 'Выбрать случайных победителей':
             id_list = []
             result = []
@@ -32,6 +40,6 @@ def index():
                     nm = random.choice(id_list)[-1]
                     if nm not in result:
                         result.append(nm)
-            return render_template('/success.html', result=id_list)
+            return render_template('/success.html', result=result)
 
     return render_template('index.html', form=form)
