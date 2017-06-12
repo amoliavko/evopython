@@ -74,19 +74,11 @@
             </div>
 {% endif %}
 
-{% if result is defined %}
-            <center>
-                <p><h2><b>Победители:</b></h2></p>
-                {%for name in result%}
-                <p>{{name}}</p>
-                {%endfor%}
-            </center>
-{% endif %}
-
         <form action="" method="POST" name="Name">
         <center>
             <p><h2><b>RANDOM APP</b></h2></p>
-            <p>{{form.name(size=35, placeholder="Введите имя", class="form-control input-sm")}}</p>
+            <p>{{form.name(size=10, placeholder="Введите имя", class="form-control input-sm")}}</p>
+            {{ form.name(size=30, placeholder="Введите имя", class="form-control input-sm")}}
             <input type="submit" name="submit" value='Добавить имя' class='btn btn-lg btn-primary'>
             <input type="submit" name="submit" value='Удалить имя' class='btn btn-lg btn-primary'>
             <input type="submit" name="submit" value='Выбрать случайных победителей' class='btn btn-lg btn-primary'>
