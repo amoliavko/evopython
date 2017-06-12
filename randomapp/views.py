@@ -11,20 +11,20 @@ def index():
     if request.method == 'POST':
         if request.form['submit'] == 'Добавить имя':
             if form.name.data == '':
-                return render_template("index.html", form=form, error=form.name.data)
+                return render_template("/index.html", form=form, error=form.name.data)
             elif Table.query.filter_by(name=form.name.data).first() is None:
                 n = Table(name=form.name.data)
                 db.session.add(n)
                 db.session.commit()
-                return 'Add name'
+                return render_template("/index.html", form=form, succuss_add=form.name.data)
 
         elif request.form['submit'] == 'Удалить имя':
-#            if form.validate_on_submit():
- #           if form.name.data:
-                if Table.query.filter_by(name=form.name.data).first() is not None:
+            if form.name.data == '':
+                return render_template("/index.html", form=form, error=form.name.data)
+            elif Table.query.filter_by(name=form.name.data).first() is not None:
                     Table.query.filter(Table.name == form.name.data).delete()
                     db.session.commit()
-                    return 'Delete name ' + form.name.data
+                    return render_template("/index.html", form=form, succuss_del=form.name.data)
 
         elif request.form['submit'] == 'Выбрать случайных победителей':
             id_list = []
