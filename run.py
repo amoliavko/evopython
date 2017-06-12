@@ -1,1 +1,0 @@
-from randomapp import app
