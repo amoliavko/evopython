@@ -10,7 +10,7 @@ def index():
     form = InputName()
     if request.method == 'POST':
         if request.form['submit'] == 'Добавить имя':
-            if form.name.data is None:
+            if form.name.data == '':
                 return render_template("index.html", form=form, error=form.name.data)
             elif Table.query.filter_by(name=form.name.data).first() is None:
                 n = Table(name=form.name.data)
@@ -20,7 +20,7 @@ def index():
 
         elif request.form['submit'] == 'Удалить имя':
 #            if form.validate_on_submit():
-            if form.name.data:
+ #           if form.name.data:
                 if Table.query.filter_by(name=form.name.data).first() is not None:
                     Table.query.filter(Table.name == form.name.data).delete()
                     db.session.commit()
