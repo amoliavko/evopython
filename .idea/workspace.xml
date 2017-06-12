@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01a6fd97-6b37-4002-87c5-d63153ef4aea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/randomapp/templates/success.html" afterPath="$PROJECT_DIR$/randomapp/templates/success.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/randomapp/views.py" afterPath="$PROJECT_DIR$/randomapp/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,8 +42,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/randomapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state relative-caret-position="306">
+              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -95,8 +95,8 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/randomapp/views.py" />
         <option value="$PROJECT_DIR$/randomapp/templates/success.html" />
+        <option value="$PROJECT_DIR$/randomapp/views.py" />
       </list>
     </option>
   </component>
@@ -348,8 +348,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/randomapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="306">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
