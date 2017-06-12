@@ -11,7 +11,7 @@ def index():
     if request.method == 'POST':
         if request.form['submit'] == 'Добавить имя':
             if form.name.data is None:
-                return render_template("search_form.html", form=form, error=form.name.data)
+                return render_template("index.html", form=form, error=form.name.data)
             elif Table.query.filter_by(name=form.name.data).first() is None:
                 n = Table(name=form.name.data)
                 db.session.add(n)
@@ -42,4 +42,4 @@ def index():
                         result.append(nm)
             return render_template('/success.html', result=result)
 
-    return render_template('index.html', form=form)
+    return render_template('/index.html', form=form)
