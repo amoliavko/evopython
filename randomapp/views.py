@@ -22,9 +22,8 @@ def index():
             if len(id_list) <= 3:
                 for i in id_list:
                     result.append(i[-1])
-
             else:
-                while len(result) < 3:
+                while len(result) <= 3:
                     nm = random.choice(id_list)[-1]
                     if nm not in result:
                         result.append(nm)
