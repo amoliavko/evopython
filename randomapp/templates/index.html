@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
 
     <meta charset="utf-8">
@@ -29,8 +29,6 @@
 </head>
 
 <body>
-
-
 
 
 {% if error is defined %}
@@ -74,18 +72,23 @@
 {% endif %}
     <div class="container">
         <form action="" method="POST" name="Name">
-        <center>
-                <p><h2><b>RANDOM APP</b></h2></p>
 
-                <div class="col-xs-3">
+            <div class="container">
+                <h2><b><p class="text-center">RANDOM APP</p></b></h2>
+
+
+                <p class="text-center">
                 {{ form.name(size=30, placeholder="Введите имя", class="form-control", id="ex2", type="text")}}<br>
+                </p>
+
+
+            <center>
+                <input type="submit" name="submit" value='Добавить имя' class='btn btn-lg btn-primary'>
+                <input type="submit" name="submit" value='Удалить имя' class='btn btn-lg btn-primary'>
+                <input type="submit" name="submit" value='Выбрать случайных победителей' class='btn btn-lg btn-primary'>
+            </center>
                 </div>
 
-            <input type="submit" name="submit" value='Добавить имя' class='btn btn-lg btn-primary'>
-            <input type="submit" name="submit" value='Удалить имя' class='btn btn-lg btn-primary'>
-            <input type="submit" name="submit" value='Выбрать случайных победителей' class='btn btn-lg btn-primary'>
-
-        </center>
         </form>
     </div>
 
