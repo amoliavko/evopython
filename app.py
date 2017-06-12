@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask import render_template
 from flask.ext.wtf import Form
