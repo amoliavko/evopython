@@ -5,14 +5,22 @@
     <title>Evo</title>
 </head>
 <body>
-<header class="so-header js-so-header _fixed"> </header>
+
+{% if error is defined %}
+            <div class="alert alert-danger">
+            <center>
+                <strong>Укажите имя</strong>
+            </center>
+            </div>
+{% endif %}
+
         <form action="" method="POST" name="Name">
         <center>
             <p><h2><b>RANDOM APP</b></h2></p>
-            <p>{{form.name(size=30)}}</p>
-        <input type="submit" name="submit" value='Добавить имя'>
+            <p>{{form.name(size=35, placeholder="Введите имя", class="form-control input-sm")}}</p>
+        <input type="submit" name="submit" value='Добавить имя' class='btn btn-lg btn-primary'>
         <input type="submit" name="submit" value='Удалить имя'>
-        <input type="submit" name="submit" value='Выбрать случайных победителей'>
+        <input type="submit" name="submit" value='Выбрать случайных победителей' class="c">
         </center>
         </form>
 
