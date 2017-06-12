@@ -10,9 +10,9 @@ def index():
     form = InputName()
     if request.method == 'POST':
         if request.form['submit'] == 'Добавить имя':
-            if (form.name.data is None):
+            if form.name.data is None:
                 return render_template("search_form.html", form=form, error=form.name.data)
-            if Table.query.filter_by(name=form.name.data).first() is None:
+            elif Table.query.filter_by(name=form.name.data).first() is None:
                 n = Table(name=form.name.data)
                 db.session.add(n)
                 db.session.commit()
