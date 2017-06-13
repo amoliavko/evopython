@@ -8,7 +8,7 @@ Exercise 2
 Имена уникальны в текущем запросе.
 
 Основные технологии:
-Python 3.6.1
-Flask 0.12.2 (веб-фреймворк)
-PostgreSQL 9.6
+Python 3.6.1,
+Flask 0.12.2 (веб-фреймворк),
+PostgreSQL 9.6,
 Heroku (Cloud Application Platform)
